@@ -12,5 +12,5 @@ export default defineConfig({
     host: '127.0.0.1',
     port: 3000
   },
-  base: process.env.NODE_ENV === 'production' ? 'https://chenxch.github.io/xlegex/' : '/',
+  base: '/',
 })
