@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { ceil, floor, random, shuffle } from 'lodash-es'
 const defaultGameConfig: GameConfig = {
-  cardNum: 4,
+  cardNum: 6,
   layerNum: 2,
   trap: true,
   delNode: false,
@@ -152,7 +152,7 @@ export function useGame(config: GameConfig): Game {
     const containerWidth = container.value!.clientWidth
     const containerHeight = container.value!.clientHeight
     const width = containerWidth / 2
-    const height = containerHeight / 2 - 60
+    const height = containerHeight / 2 - 40
 
     floorList.forEach((o, index) => {
       indexSet.clear()
@@ -168,7 +168,7 @@ export function useGame(config: GameConfig): Game {
           id: `${index}-${i}`,
           type: k,
           zIndex:
-        index,
+          index,
           index: i,
           row,
           column,

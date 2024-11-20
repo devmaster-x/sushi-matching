@@ -14,12 +14,13 @@ const dropAudioRef = ref<HTMLAudioElement | undefined>()
 const winAudioRef = ref<HTMLAudioElement | undefined>()
 const loseAudioRef = ref<HTMLAudioElement | undefined>()
 const welAudioRef = ref<HTMLAudioElement | undefined>()
-const curLevel = ref(1)
+const curLevel = ref(0)
 const showTip = ref(false)
 const LevelConfig = [
-  { cardNum: 4, layerNum: 2, trap: false },
-  { cardNum: 9, layerNum: 3, trap: false },
-  { cardNum: 15, layerNum: 6, trap: false },
+  { cardNum: 8, layerNum: 2, trap: false },
+  { cardNum: 12, layerNum: 2, trap: false },
+  { cardNum: 15, layerNum: 2, trap: false },
+  { cardNum: 22, layerNum: 2, trap: false },
 ]
 
 const isWin = ref(false)
@@ -37,7 +38,7 @@ const {
   initData,
 } = useGame({
   container: containerRef,
-  cardNum: 4,
+  cardNum: 6,
   layerNum: 2,
   trap: false,
   events: {
@@ -138,7 +139,7 @@ onMounted(() => {
     <div text-20px sm:text-44px text-center w-full color="#000" fw-600 h-60px flex items-center justify-center mt-10px>
       Match Sushi Cards
     </div>
-    <div text-center w-full color="#000" flex items-center justify-center>
+    <div text-center w-full color="#000" flex items-center justify-center mb-4>
       <appkit-button />
     </div>    
     <div ref="containerRef" flex-1 flex>
