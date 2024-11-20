@@ -17,9 +17,9 @@ const welAudioRef = ref<HTMLAudioElement | undefined>()
 const curLevel = ref(1)
 const showTip = ref(false)
 const LevelConfig = [
+  { cardNum: 4, layerNum: 2, trap: false },
   { cardNum: 9, layerNum: 3, trap: false },
-  { cardNum: 15, layerNum: 5, trap: false },
-  { cardNum: 22, layerNum: 7, trap: false },
+  { cardNum: 15, layerNum: 6, trap: false },
 ]
 
 const isWin = ref(false)
